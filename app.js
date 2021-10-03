@@ -29,8 +29,8 @@ app.post("/",function(req,res){
       const icon =  weatherData.weather[0].icon
       const imgURL =" http://openweathermap.org/img/wn/"+icon+"@2x.png"
 
-      res.write("<p>the weather is currently " + weatherDesc + "<p>");
-      res.write("<h1>the temp of "+query+ " is " + temp + "</h1>");
+      res.write("<p>Weather = " + weatherDesc + "<p>");
+      res.write("<h1>Temp = "+query+ " is " + temp + "</h1>");
       res.write("<img src=" +imgURL +">");
       res.send()
 
@@ -40,6 +40,6 @@ app.post("/",function(req,res){
 })
 
 
-app.listen(3000, function(){
-  console.log("server is running on 3000");
+app.listen(5000, function(){
+  console.log("Server started");
 });
